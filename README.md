@@ -17,10 +17,10 @@ Analyze the following:
 * The greatest increase in profits (date and amount) over the period
 * The greatest decrease in losses (date and amount) over the period
 See result below:
-### PyBank: Running Code###
+## PyBank: Running Code ##
 ![](Assets/pybank.gif)
 
-### PyBank: Result of Analysis###
+## PyBank: Result of Analysis ##
 ![](Assets/pybank.png)
 
 
@@ -32,10 +32,10 @@ Help a small rural town modernize its vote counting process. A set of poll data 
 * The total number of votes each candidates won
 * The winner of the election based on popular votes
 See result below:
-### PyPoll: Running Code###
+## PyPoll: Running Code ##
 ![](Assets/pypoll.gif)
 
-### PyPoll: Result of Analysis###
+## PyPoll: Result of Analysis ##
 ![](Assets/pypoll.png)
 
 
