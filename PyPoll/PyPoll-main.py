@@ -1,4 +1,4 @@
-# Import Modules/Dependencies
+# Import Modules
 import os
 import csv
 
@@ -9,22 +9,22 @@ correy_votes = 0
 li_votes = 0
 otooley_votes = 0
 
-# Set Path For File
+# Set Path 
 csvpath = os.path.join('.', 'PyPoll', 'Resources', 'election_data.csv')
 
-# Open & Read CSV File
+# Read CSV File
 with open(csvpath, newline='') as csvfile:
 
     # CSV Reader Specifies Delimiter & Variable That Holds Contents
     csvreader = csv.reader(csvfile, delimiter=',')
     
-    # Read The Header Row First (Skip This Step If There Is No Header)
+    # Read The Header Row First 
     csv_header = next(csvfile)
 
-    # Read Each Row Of Data After The Header
+    # Read Each Row After The Header
     for row in csvreader:
         
-        # Calculate Total Number Of Votes Cast
+        # Calculate Total Number Of Votes 
         total_votes += 1
         
         # Calculate Total Number Of Votes Each Candidate Won
@@ -37,7 +37,7 @@ with open(csvpath, newline='') as csvfile:
         else:
             otooley_votes += 1
             
-    # Calculate Percentage Of Votes Each Candidate Won
+    # Calculate Percentage Of Votes for Each Candidate Won
     kahn_percent = khan_votes / total_votes
     correy_percent = correy_votes / total_votes
     li_percent = li_votes / total_votes
@@ -55,7 +55,7 @@ with open(csvpath, newline='') as csvfile:
     else:
         winner_name = "O'Tooley" 
 
-# Print Analysis
+# Print result
 print(f"Election Results")
 print(f"---------------------------")
 print(f"Total Votes: {total_votes}")
@@ -68,10 +68,10 @@ print(f"---------------------------")
 print(f"Winner: {winner_name}")
 print(f"---------------------------")
 
-# Specify File To Write To
+# Specify destination of File
 output_file = os.path.join('.', 'PyPoll', 'Resources', 'election_data_revised.text')
 
-# Open File Using "Write" Mode. Specify The Variable To Hold The Contents
+# Open File Using "Write" Mode. 
 with open(output_file, 'w',) as txtfile:
 
 # Write New Data

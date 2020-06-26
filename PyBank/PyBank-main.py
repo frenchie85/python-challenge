@@ -1,4 +1,4 @@
-# Import Modules/Dependencies
+# Import Modules
 import os
 import csv
 
@@ -12,32 +12,32 @@ greatest_increase_month = 0
 greatest_decrease = 0
 greatest_decrease_month = 0
 
-# Set Path For File
+# Set Path 
 csvpath = os.path.join('.', 'PyBank', 'Resources', 'budget_data.csv')
 
-# Open & Read CSV File
+# Read CSV File
 with open(csvpath, newline='') as csvfile:
     
-    # CSV Reader Specifies Delimiter & Variable That Holds Contents
+    # CSV Reader Specifies Delimiter 
     csvreader = csv.reader(csvfile, delimiter=',')
     
-    # Read The Header Row First (Skip This Step If There Is No Header)
+    # Read The Header Row First
     csv_header = next(csvreader)
     row = next(csvreader)
     
-    # Calculate Total Number Of Months, Net Amount Of "Profit/Losses" & Set Variables For Rows
+    # Calculate Total Number Of Months, Net Amount Of "Profit/Losses"
     previous_row = int(row[1])
     total_months += 1
     net_amount += int(row[1])
     greatest_increase = int(row[1])
     greatest_increase_month = row[0]
     
-    # Read Each Row Of Data After The Header
+    # Read Each Row Of Data After Header
     for row in csvreader:
         
         # Calculate Total Number Of Months Included In Dataset
         total_months += 1
-        # Calculate Net Amount Of "Profit/Losses" Over The Entire Period
+        # Calculate Net Amount Of "Profit/Losses" Over The Period
         net_amount += int(row[1])
 
         # Calculate Change From Current Month To Previous Month
@@ -71,10 +71,10 @@ print(f"Average Change: ${average_change:.2f}")
 print(f"Greatest Increase in Profits:, {greatest_increase_month}, (${highest})")
 print(f"Greatest Decrease in Profits:, {greatest_decrease_month}, (${lowest})")
 
-# Specify File To Write To
+# Specify destination of File 
 output_file = os.path.join('.', 'PyBank', 'Resources', 'budget_data_revised.text')
 
-# Open File Using "Write" Mode. Specify The Variable To Hold The Contents
+# Open File Using "Write" Mode. 
 with open(output_file, 'w',) as txtfile:
 
 # Write New Data
