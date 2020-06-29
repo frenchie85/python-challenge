@@ -69,7 +69,7 @@ print(f"Winner: {winner_name}")
 print(f"---------------------------")
 
 # Specify destination of File
-output_file = os.path.join('.', 'PyPoll', 'Resources', 'election_data_revised.text')
+output_file = os.path.join('.', 'PyPoll', 'Resources', 'election_data_revised.txt')
 
 # Open File Using "Write" Mode. 
 with open(output_file, 'w',) as txtfile:

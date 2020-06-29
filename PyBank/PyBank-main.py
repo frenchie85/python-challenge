@@ -72,7 +72,7 @@ print(f"Greatest Increase in Profits:, {greatest_increase_month}, (${highest})")
 print(f"Greatest Decrease in Profits:, {greatest_decrease_month}, (${lowest})")
 
 # Specify destination of File 
-output_file = os.path.join('.', 'PyBank', 'Resources', 'budget_data_revised.text')
+output_file = os.path.join('.', 'PyBank', 'Resources', 'budget_data_revised.txt')
 
 # Open File Using "Write" Mode. 
 with open(output_file, 'w',) as txtfile:
